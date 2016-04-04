@@ -13,6 +13,9 @@ body {
 #editor {
     height: 100vh;
 }
+#result {
+    height: calc(100vh - 10px);
+}
 
 .col-result {
     overflow: auto;
@@ -22,6 +25,7 @@ body {
     background: #27ae60;
     color: #fff;
     padding: 10px;
+    overflow: none;
     font-family: 'Cutive Mono', Monaco, monospace;
     font-weight: 600;
 }

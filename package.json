@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/IonicaBizau/ejs-playground#readme",
   "blah": {
-      "ex_img": "http://i.imgur.com/Hbq4N7t.png",
-      "ex_url": "https://ionicabizau.github.io/ejs-playground"
+    "ex_img": "http://i.imgur.com/Hbq4N7t.png",
+    "ex_url": "https://ionicabizau.github.io/ejs-playground"
+  },
+  "devDependencies": {
+    "sigma": "^1.1.0"
   }
 }

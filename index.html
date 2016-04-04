@@ -2,25 +2,101 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>EJS Playground</title>
-        <script src="https://cdn.rawgit.com/tj/ejs/master/ejs.min.js"></script>
+        <title>Sigma.js Playground</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js"></script>
         <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
     </head>
     <body>
         <div class="row">
             <div class="col">
-                <div id="editor">
+                <div id="editor">/**
+ * +-----------------------------------+
+ * | WELCOME TO SIGMA.JS PLAYGROUND!   |
+ * +-----------------------------------+
+ * |  Write your code and then press:  |
+ * |                                   |
+ * |         <CTRL> + <ENTER>          |
+ * |                                   |
+ * | to run it and watch the magic in  |
+ * |          the right side.          |
+ * |               * * *               |
+ * |      Check Sigma.js docs at:      |
+ * |        http://sigmajs.org/        |
+ * +-----------------------------------+
+ *
+ *           So, have fun! :)
+ */
 
-                </div>
+// The app will interpret the GRAPH_DATA
+// global  as the graph data.  So,  feel
+// free  to add there as many  nodes and
+// edges you want.
+var GRAPH_DATA = window.GRAPH_DATA = {
+        nodes: []
+      , edges: []
+    }
+  , nodes = GRAPH_DATA.nodes
+  , edges = GRAPH_DATA.edges
+  ;
+
+// OK, so let's build a heart.
+// Well, hearts.
+// More than one.
+const K = 3
+    , STEP = 0.03
+    ;
+
+// Colors used in the nodes
+var colors = ["#e74c3c", "#c0392b", "#e67e22", "#f1c40f"];
+
+// Color index
+var cIndex = 0;
+
+// How many hearts? I guess 4 are enough.
+var heartsCount = 4;
+
+// A litlte bit of black magic math is needed, but yeah. :)
+for (var c = 1; c <= heartsCount; ++c) {
+    for (var i = -K; i <= K; i += STEP) {
+        nodes.push({
+            id: "n_" + i + "_" + c
+          , x: c * (
+                16 * Math.pow(Math.sin(i), 3)
+              + (Math.random() * (heartsCount - c))
+            )
+          , y: -3 * c + -c * (
+                13 * Math.cos(i) - 5 * Math.cos(2 * i)
+              - 2 * Math.cos(3 * i) - Math.cos(4 * i)
+              + Math.random() * (heartsCount - c)
+            )
+          , label: ""
+          , size: c * 2
+          , color: colors[cIndex = ++cIndex % colors.length]
+        });
+    }
+}
+
+// And then we will generate the edges
+nodes.forEach(function (source) {
+    var max = Math.random() * source.size;
+    for (var i = 0; i < max; ++i) {
+        var target = nodes[Math.floor(Math.random() * nodes.length)];
+        edges.push({
+            id: Math.random().toString()
+          , source: source.id
+          , target: target.id
+          , color: "rgba(255, 255, 255, 0.7)"
+        });
+    }
+});</div>
             </div>
             <div class="col col-result custom-scrollbar">
-                <pre id="result">
-                </pre>
+                <div id="result">
+                </div>
             </div>
         </div>
         <div class="footer">
-            <span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <a href="https://github.com/IonicaBizau">@IonicaBizau</a> |  <a href="https://github.com/IonicaBizau/ejs-playground"> <span class="octicon octicon-octoface"></span> @IonicaBizau/ejs-playground</a>
+            <span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <a href="https://github.com/IonicaBizau">@IonicaBizau</a> |  <a href="https://github.com/IonicaBizau/sigma-playground"> <span class="octicon octicon-octoface"></span> @IonicaBizau/sigma-playground</a>
         </div>
         <script src="js/main.js"></script>
     </body>
