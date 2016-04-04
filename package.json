@@ -1,28 +1,28 @@
 {
-  "name": "ejs-playground",
+  "name": "sigma-playground",
   "version": "1.0.0",
-  "description": "A web app to play with EJS templates.",
+  "description": "A web app to play with sigma.js graphs.",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/IonicaBizau/ejs-playground.git"
+    "url": "git+ssh://git@github.com/IonicaBizau/sigma-playground.git"
   },
   "keywords": [
-    "ejs",
+    "sigma",
     "playground"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IonicaBizau/ejs-playground/issues"
+    "url": "https://github.com/IonicaBizau/sigma-playground/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/ejs-playground#readme",
+  "homepage": "https://github.com/IonicaBizau/sigma-playground#readme",
   "blah": {
     "ex_img": "http://i.imgur.com/Hbq4N7t.png",
-    "ex_url": "https://ionicabizau.github.io/ejs-playground"
+    "ex_url": "https://ionicabizau.github.io/sigma-playground"
   },
   "devDependencies": {
     "sigma": "^1.1.0"
