@@ -1,6 +1,6 @@
 {
   "name": "sigma-playground",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A web app to play with sigma.js graphs.",
   "main": "index.html",
   "scripts": {
@@ -26,5 +26,16 @@
   },
   "devDependencies": {
     "sigma": "^1.1.0"
-  }
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ]
 }
