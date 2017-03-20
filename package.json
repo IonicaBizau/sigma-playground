@@ -1,6 +1,6 @@
 {
   "name": "sigma-playground",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A web app to play with sigma.js graphs.",
   "main": "index.html",
   "scripts": {
@@ -14,7 +14,7 @@
     "sigma",
     "playground"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IonicaBizau/sigma-playground/issues"
@@ -31,12 +31,11 @@
     "bin/",
     "app/",
     "lib/",
-    "build/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
-    "scripts/",
     "cli.js",
     "index.js"
   ]
