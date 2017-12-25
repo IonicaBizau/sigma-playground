@@ -1,6 +1,6 @@
 {
   "name": "sigma-playground",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A web app to play with sigma.js graphs.",
   "main": "index.html",
   "scripts": {
