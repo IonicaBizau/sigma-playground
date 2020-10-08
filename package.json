@@ -15,6 +15,9 @@
     "playground"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
+  "contributors": [
+   "NaveenDA <mailtomassnaveen@gmail.com> (https://github.com/NaveenDA)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IonicaBizau/sigma-playground/issues"
