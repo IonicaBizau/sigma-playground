@@ -1,69 +1,87 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/gridly/1.4.1/prefixed/gridly.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.css);
-@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
 
 .row {
-    height: 100vh;
+  height: 100vh;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-
+.toolbar {
+  height: 30px;
+  background: #ebebeb;
+  line-height: 30px;
+  padding-left: 25px;
+  box-shadow: inset 0 -1px 0 #e1e4e8;
+  font-weight: 600;
+}
 #editor {
-    height: 100vh;
+  height: calc(100vh - 30px);
+  background-color: #f5f7ff;
 }
 #result {
-    height: calc(100vh - 10px);
+  height: calc(100vh - 30px);
 }
 
 .col-result {
-    overflow: auto;
+  overflow: auto;
 }
 
 .col.col-result {
-    background: #27ae60;
-    color: #fff;
-    padding: 10px;
-    overflow: none;
-    font-family: 'Cutive Mono', Monaco, monospace;
-    font-weight: 600;
-}
-
-/*http://cssdeck.com/labs/custom-webkit-scrollbars/**/
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-::-webkit-scrollbar-track {
-    background-color: rgba(113,112,107,0.1);
-    -webkit-border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:vertical {
-    background-color: rgba(0,0,0,.2);
-    -webkit-border-radius: 6px;
-}
-::-webkit-scrollbar-thumb:vertical:hover,
-::-webkit-scrollbar-thumb:horizontal:hover {
-    background: red;
-}
-::-webkit-scrollbar-thumb:horizontal {
-    background-color: rgba(0,0,0,.2);
-    -webkit-border-radius: 6px;
+  background: #96f6b7;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
 }
 
 .footer {
-    position: fixed;
-    z-index: 99;
-    right: 10px;
-    bottom: 21px;
-    color: #000000;
-    background: #fff;
-    padding: 10px;
-    font-family: 'Cutive Mono', Monaco, monospace;
+  position: fixed;
+  z-index: 99;
+  right: 10px;
+  bottom: 21px;
+  color: #000000;
+  background: rgba(255, 255, 255, 0.8);
+  line-height: 30px;
+  border-radius: 30px;
+}
+.footer .code {
+  background: #d1d1d1;
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.footer .octoface {
+    background: #d1d1d1;
+    padding: 5px;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+/*http://cssdeck.com/labs/custom-webkit-scrollbars/**/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(113, 112, 107, 0.1);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background: red;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
 }
 
 a {
-    color: #1D75AB;
-    text-decoration: none;
+  color: #1d75ab;
+  text-decoration: none;
 }

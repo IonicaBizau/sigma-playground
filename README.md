@@ -84,7 +84,7 @@ There are few ways to get help:
 
 ## :memo: Documentation
 
-
+```
 +-----------------------------------+
 | WELCOME TO SIGMA.JS PLAYGROUND!   |
 +-----------------------------------+
@@ -100,7 +100,7 @@ There are few ways to get help:
 +-----------------------------------+
 
           So, have fun! :)
-
+```
 
 
 
